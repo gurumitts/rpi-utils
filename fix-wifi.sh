@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #This script will disable WIFI power management to imporove overall wireless performance.  
+#Based on the information found here: https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=44044&start=455
 
 
 #Make sure the power management is off
 iwconfig wlan0 power off
-
 
 echo "options 8192cu rtw_power_mgnt=0 rtw_enusbss=0 rtw_ips_mode=1" >> /etc/modprobe.d/8192cu.conf
 
